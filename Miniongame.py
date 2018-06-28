@@ -21,11 +21,13 @@ for i in s:
         for n in range(len(s)-(t-1)):
             strg = (s[t-1:n+t])
             ptss[1] = ptss[1] +1
-
-p = max(ptsk[1],ptss[1])
-if p in ptsk:
-    print (ptsk[0], end=" ")
-    print (ptsk[1])
+if (ptss[1] == ptsk[1]):
+    print ("Draw")
 else:
-    print (ptss[0], end=" ")
-    print (ptss[1])
+    p = max(ptsk[1],ptss[1])
+    if p in ptsk:
+        print (ptsk[0], end=" ")
+        print (ptsk[1])
+    else:
+        print (ptss[0], end=" ")
+        print (ptss[1])
